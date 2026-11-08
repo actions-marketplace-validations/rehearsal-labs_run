@@ -1,0 +1,37 @@
+name: Rehearsal
+description: Run your saved browser tests against a deployment and report the result.
+author: Rehearsal
+branding:
+  icon: check-circle
+  color: gray-dark
+inputs:
+  rule:
+    description: The Action rule ID from Rehearsal.
+    required: true
+  url:
+    description: An HTTPS deployment address on a host allowed by the rule.
+    required: true
+  sha:
+    description: The deployed commit. Defaults to the pull request head or GITHUB_SHA.
+    required: false
+  wait:
+    description: Wait for the tests. With false, success means the run started.
+    default: 'true'
+  timeout:
+    description: Minutes to wait, from 1 to 60. A timeout fails the step.
+    default: '30'
+  api-url:
+    description: Rehearsal API address. Override only for a development server.
+    default: https://api.rehearsal.dev
+outputs:
+  run-id:
+    description: The Rehearsal run ID.
+  run-url:
+    description: Open the run in Rehearsal.
+  status:
+    description: queued, running, passed, failed, blocked, cancelled, could_not_run, or unknown when the result cannot be read.
+  conclusion:
+    description: success, failure, action_required, cancelled, timed_out, or pending.
+runs:
+  using: node24
+  main: dist/index.js
