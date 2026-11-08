@@ -66,3 +66,7 @@ When the wait ends before the run does, `conclusion` is `timed_out` and the chec
 ## Learn more
 
 [Rules for pull requests and deployments](https://rehearsal.dev/docs/github/rules) in Rehearsal's docs covers rules, addresses and checks in full.
+
+## License
+
+[Apache-2.0](LICENSE)
