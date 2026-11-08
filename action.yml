@@ -1,4 +1,4 @@
-name: Rehearsal
+name: Rehearsal Run
 description: Run your saved browser tests against a deployment and report the result.
 author: Rehearsal
 branding:

@@ -1,4 +1,4 @@
-# Rehearsal
+# Rehearsal Run
 
 Run your saved Rehearsal tests against a deployment from a GitHub workflow, and see the result as a check on the commit.
 
